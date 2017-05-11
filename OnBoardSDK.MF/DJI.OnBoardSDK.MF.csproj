@@ -1,0 +1,112 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <AssemblyName>DJI.OnBoardSDK.MF</AssemblyName>
+    <OutputType>Library</OutputType>
+    <RootNamespace>DJI.OnBoardSDK.MF</RootNamespace>
+    <ProjectTypeGuids>{b69e3092-b931-443c-abe7-7e7b65f2a37f};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{0FA0FA06-35BC-4886-B578-7BE6C2EA96FE}</ProjectGuid>
+    <TargetFrameworkVersion>v4.3</TargetFrameworkVersion>
+    <NetMfTargetsBaseDir Condition="'$(NetMfTargetsBaseDir)'==''">$(MSBuildExtensionsPath32)\Microsoft\.NET Micro Framework\</NetMfTargetsBaseDir>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE,MF_FRAMEWORK_VERSION_V4_3,NETMF</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="..\OnBoardSDK\Constants.cs">
+      <Link>Constants.cs</Link>
+    </Compile>
+    <Compile Include="..\OnBoardSDK\CoreAPI.App.cs">
+      <Link>CoreAPI.App.cs</Link>
+    </Compile>
+    <Compile Include="..\OnBoardSDK\CoreAPI.Camera.cs">
+      <Link>CoreAPI.Camera.cs</Link>
+    </Compile>
+    <Compile Include="..\OnBoardSDK\CoreAPI.Codecs.cs">
+      <Link>CoreAPI.Codecs.cs</Link>
+    </Compile>
+    <Compile Include="..\OnBoardSDK\CoreAPI.cs">
+      <Link>CoreAPI.cs</Link>
+    </Compile>
+    <Compile Include="..\OnBoardSDK\CoreAPI.Flight.cs">
+      <Link>CoreAPI.Flight.cs</Link>
+    </Compile>
+    <Compile Include="..\OnBoardSDK\CoreAPI.Header.cs">
+      <Link>CoreAPI.h.cs</Link>
+    </Compile>
+    <Compile Include="..\OnBoardSDK\CoreAPI.Link.cs">
+      <Link>CoreAPI.Link.cs</Link>
+    </Compile>
+    <Compile Include="..\OnBoardSDK\CoreAPI.Log.cs">
+      <Link>CoreAPI.Log.cs</Link>
+    </Compile>
+    <Compile Include="..\OnBoardSDK\CoreAPI.Memory.cs">
+      <Link>CoreAPI.Memory.cs</Link>
+    </Compile>
+    <Compile Include="..\OnBoardSDK\CoreAPI.Properties.cs">
+      <Link>CoreAPI.Properties.cs</Link>
+    </Compile>
+    <Compile Include="..\OnBoardSDK\CoreAPI.VirtualRC.cs">
+      <Link>CoreAPI.VirtualRC.cs</Link>
+    </Compile>
+    <Compile Include="..\OnBoardSDK\Flight.Properties.cs">
+      <Link>Flight.Properties.cs</Link>
+    </Compile>
+    <Compile Include="..\OnBoardSDK\HardDriver.cs">
+      <Link>HardDriver.cs</Link>
+    </Compile>
+    <Compile Include="..\OnBoardSDK\ManagedDriver.cs">
+      <Link>ManagedDriver.cs</Link>
+    </Compile>
+    <Compile Include="..\OnBoardSDK\ManagedDriver.Sync.cs">
+      <Link>ManagedDriver.Sync.cs</Link>
+    </Compile>
+    <Compile Include="..\OnBoardSDK\Pointer.cs">
+      <Link>Pointer.cs</Link>
+    </Compile>
+    <Compile Include="..\OnBoardSDK\Types.Codes.cs">
+      <Link>Types.Codes.cs</Link>
+    </Compile>
+    <Compile Include="..\OnBoardSDK\Types.Common.cs">
+      <Link>Types.Common.cs</Link>
+    </Compile>
+    <Compile Include="..\OnBoardSDK\Types.cs">
+      <Link>Types.cs</Link>
+    </Compile>
+    <Compile Include="..\OnBoardSDK\Types.Flight.cs">
+      <Link>Types.Flight.cs</Link>
+    </Compile>
+    <Compile Include="..\OnBoardSDK\Types.Version.cs">
+      <Link>Types.Version.cs</Link>
+    </Compile>
+    <Compile Include="..\OnBoardSDK\Utility.cs">
+      <Link>Utility.cs</Link>
+    </Compile>
+    <Compile Include="ManagedDriverMF.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="StringFormat.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.SPOT.Native" />
+  </ItemGroup>
+  <Import Condition="EXISTS('$(NetMfTargetsBaseDir)$(TargetFrameworkVersion)\CSharp.Targets')" Project="$(NetMfTargetsBaseDir)$(TargetFrameworkVersion)\CSharp.Targets" />
+  <Import Condition="!EXISTS('$(NetMfTargetsBaseDir)$(TargetFrameworkVersion)\CSharp.Targets')" Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

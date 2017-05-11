@@ -3,3 +3,7 @@
 ################################################################################
 
 /OnBoardSDK/bin/Debug
+/.vs
+/OnBoardSDK/obj
+/OnBoardSDK.MF/bin/Debug
+/OnBoardSDK.MF/obj/Debug

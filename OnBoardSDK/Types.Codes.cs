@@ -1,0 +1,172 @@
+﻿namespace DJI.OnBoardSDK
+{
+    public enum ACK_ERROR_CODE
+    {
+        ACK_SUCCESS = 0x0000,
+        ACK_PARAM_ERROR = 0x0001
+    };
+
+    public enum ACK_COMMON_CODE
+    {
+        ACK_COMMON_SUCCESS = 0x0000,
+        ACK_COMMON_KEYERROR = 0xFF00,
+        ACK_COMMON_NO_AUTHORIZATION = 0xFF01,
+        ACK_COMMON_NO_RIGHTS = 0xFF02,
+        ACK_COMMON_NO_RESPONSE = 0xFFFF
+    };
+
+    public enum ACK_ACTIVE_CODE
+    {
+        ACK_ACTIVE_SUCCESS = 0x0000,
+        ACK_ACTIVE_PARAMETER_ERROR = 0x0001,
+        ACK_ACTIVE_ENCODE_ERROR = 0x0002,
+        ACK_ACTIVE_NEW_DEVICE = 0x0003,
+        ACK_ACTIVE_APP_NOT_CONNECTED = 0x0004,
+        ACK_ACTIVE_NO_INTERNET = 0x0005,
+        ACK_ACTIVE_SERVER_REFUSED = 0x0006,
+        ACK_ACTIVE_ACCESS_LEVEL_ERROR = 0x0007,
+        ACK_ACTIVE_VERSION_ERROR = 0x0008,
+        ACK_ACTIVE_DEFAULT = 0x00FF,
+
+        ACK_COMMON_KEYERROR = 0xFF00,
+        ACK_COMMON_NO_AUTHORIZATION = 0xFF01,
+        ACK_COMMON_NO_RIGHTS = 0xFF02,
+        ACK_COMMON_NO_RESPONSE = 0xFFFF
+    };
+
+    public enum ACK_SETCONTROL_CODE
+    {
+        ACK_SETCONTROL_ERROR_MODE = 0x0000,
+        ACK_SETCONTROL_RELEASE_SUCCESS = 0x0001,
+        ACK_SETCONTROL_OBTAIN_SUCCESS = 0x0002,
+        ACK_SETCONTROL_OBTAIN_RUNNING = 0x0003,
+        ACK_SETCONTROL_RELEASE_RUNNING = 0x0004,
+        ACK_SETCONTROL_NEED_MODE_F = 0x0006,
+        ACK_SETCONTROL_NEED_MODE_P = 0x0005,
+        ACK_SETCONTROL_IOC = 0x00C9,
+
+        ACK_COMMON_KEYERROR = 0xFF00,
+        ACK_COMMON_NO_AUTHORIZATION = 0xFF01,
+        ACK_COMMON_NO_RIGHTS = 0xFF02,
+        ACK_COMMON_NO_RESPONSE = 0xFFFF
+    };
+
+    public enum ACK_ARM_CODE
+    {
+        ACK_ARM_SUCCESS = 0x0000,
+        ACK_ARM_NEED_CONTROL = 0x0001,
+        ACK_ARM_ALREADY_ARMED = 0x0002,
+        ACK_ARM_IN_AIR = 0x0003,
+
+        ACK_COMMON_KEYERROR = 0xFF00,
+        ACK_COMMON_NO_AUTHORIZATION = 0xFF01,
+        ACK_COMMON_NO_RIGHTS = 0xFF02,
+        ACK_COMMON_NO_RESPONSE = 0xFFFF
+    };
+
+    public enum TASK_ACK_CODE
+    {
+        TASK_FAILURE = 0x01,
+        TASK_SUCCESS = 0x02
+    };
+
+
+    //! @note end of ACKs
+
+    public enum CMD_SET
+    {
+        SET_ACTIVATION = 0x00,
+        SET_CONTROL = 0x01,
+        SET_BROADCAST = 0x02,
+        SET_MISSION = 0x03,
+        SET_SYNC = 0x04,
+        SET_VIRTUALRC = 0x05
+    };
+
+    public enum SYNC_CODE
+    {
+        CODE_SYNC_BROADCAST = 0x00
+    };
+
+    public enum HOTPOINT_CODE
+    {
+        CODE_HOTPOINT_START = 0x20,
+        CODE_HOTPOINT_STOP = 0x21,
+        CODE_HOTPOINT_SETPAUSE = 0x22,
+        CODE_HOTPOINT_YAWRATE = 0x23,
+        CODE_HOTPOINT_RADIUS = 0x24,
+        CODE_HOTPOINT_SETYAW = 0x25,
+        CODE_HOTPOINT_LOAD = 0x26
+    };
+
+    public enum FOLLOW_CODE
+    {
+        CODE_FOLLOW_START = 0x30,
+        CODE_FOLLOW_STOP = 0x31,
+        CODE_FOLLOW_SETPAUSE = 0X32,
+        CODE_FOLLOW_TARGET = 0X33
+    };
+
+    public enum WAYPOINT_CODE
+    {
+        CODE_WAYPOINT_INIT = 0x10,
+        CODE_WAYPOINT_ADDPOINT = 0x11,
+        CODE_WAYPOINT_SETSTART = 0x12,
+        CODE_WAYPOINT_SETPAUSE = 0x13,
+        CODE_WAYPOINT_INFO_READ = 0x14,
+        CODE_WAYPOINT_INDEX_READ = 0x15,
+        CODE_WAYPOINT_SETVELOCITY = 0x16,
+        CODE_WAYPOINT_GETVELOCITY = 0x17,
+    };
+
+    public enum ACTIVATION_CODE
+    {
+        CODE_GETVERSION = 0,
+        CODE_ACTIVATE = 1,
+        CODE_FREQUENCY = 0x10,
+        CODE_TOMOBILE = 0xFE
+    };
+
+    public enum CONTROL_CODE
+    {
+        CODE_SETCONTROL = 0,
+        CODE_TASK = 1,
+        CODE_STATUS = 2,
+        CODE_CONTROL = 3,
+        CODE_SETARM = 5,
+    };
+
+    public enum BROADCAST_CODE
+    {
+        CODE_BROADCAST = 0x00,
+        CODE_LOSTCTRL = 0x01,
+        CODE_FROMMOBILE = 0x02,
+        CODE_MISSION = 0x03,
+        CODE_WAYPOINT = 0x04
+    };
+
+    public enum VIRTUALRC_CODE
+    {
+        CODE_VIRTUALRC_SETTINGS,
+        CODE_VIRTUALRC_DATA
+    };
+
+    public enum MISSION_TYPE
+    {
+        MISSION_MODE_A,
+        MISSION_WAYPOINT,
+        MISSION_HOTPOINT,
+        MISSION_FOLLOW,
+        MISSION_IOC
+    };
+
+    public enum BROADCAST_FREQ
+    {
+        BROADCAST_FREQ_0HZ = 0,
+        BROADCAST_FREQ_1HZ = 1,
+        BROADCAST_FREQ_10HZ = 2,
+        BROADCAST_FREQ_50HZ = 3,
+        BROADCAST_FREQ_100HZ = 4,
+        BROADCAST_FREQ_HOLD = 5,
+    };
+}
